@@ -1,7 +1,8 @@
 import { Command } from 'discord.js-commando';
+import { random } from '../../utils/helpers.js';
 import quotes from '../../resources/quotes.js';
 
-export default class QuoteCommand extends Command {
+class QuoteCommand extends Command {
   constructor(client) {
     super(client, {
       name: 'quote',
@@ -11,15 +12,12 @@ export default class QuoteCommand extends Command {
       description: 'Lo mismo se pone a memear que a filosofar.',
       examples: ['ilustranos', 'memea']
     });
+    this.quotes = quotes;
   }
 
   run(message) {
-    return message.say(this.randomQuote());
-  }
-
-  randomQuote() {
-    const random = Math.floor(Math.random() * (quotes.length - 1));
-
-    return quotes[random];
+    return message.say(random(this.quotes));
   }
 }
+
+export default QuoteCommand;
