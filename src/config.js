@@ -2,7 +2,7 @@ export default {
   'groups': [
     [
       'fun',
-      'Chorradas',
+      'Memes',
     ],
     [
       'utility',
