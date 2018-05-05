@@ -1,0 +1,25 @@
+{
+  "name": "trackpoth",
+  "version": "1.0.0",
+  "description": "Reticueva's Discord bot",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/diegocasillasdev/trackpoth.git"
+  },
+  "keywords": [
+    "trackpoth",
+    "reticueva",
+    "discord",
+    "bot"
+  ],
+  "author": "Diego Casillas <diegocasillasdev@gmail.com> (http://diegocasillasdev.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/diegocasillasdev/trackpoth/issues"
+  },
+  "homepage": "https://github.com/diegocasillasdev/trackpoth#readme"
+}
