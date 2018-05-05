@@ -10,7 +10,7 @@ class GreetingCommand extends Command {
       group: 'fun',
       memberName: 'greeting',
       description: 'Saluda cariñosamente.',
-      examples: ['hola', 'ola']
+      examples: ['hola', 'ola', 'saluda']
     });
     this.greetings = greetings;
   }
