@@ -32,5 +32,17 @@
   },
   "dependencies": {
     "discord.js-commando": "^0.10.0"
+  },
+  "babel": {
+    "presets": [
+      [
+        "env",
+        {
+          "targets": {
+            "node": "current"
+          }
+        }
+      ]
+    ]
   }
 }
