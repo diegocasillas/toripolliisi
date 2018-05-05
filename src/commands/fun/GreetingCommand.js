@@ -9,8 +9,7 @@ class GreetingCommand extends Command {
       aliases: ['hola', 'ola', 'saluda'],
       group: 'fun',
       memberName: 'greeting',
-      description: 'Saluda cariñosamente.',
-      examples: ['hola', 'ola', 'saluda']
+      description: 'Saluda cariñosamente.'
     });
     this.greetings = greetings;
   }

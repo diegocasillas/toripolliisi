@@ -7,8 +7,7 @@ class CoinCommand extends Command {
       aliases: ['moneda', 'lanzar', 'caraocruz'],
       group: 'fun',
       memberName: 'coin',
-      description: 'Lanza una moneda.',
-      examples: ['moneda', 'lanzar', 'caraocruz']
+      description: 'Lanza una moneda.'
     });
   }
 
