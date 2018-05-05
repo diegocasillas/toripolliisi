@@ -1,9 +1,9 @@
 export default {
-    'commandPrefix': 'trackpoth ',
-    'groups': [
-        [
-            'fun',
-            'Comandos chorra',
-        ],
-    ]
+  'commandPrefix': 'trackpoth ',
+  'groups': [
+    [
+      'fun',
+      'Comandos chorra',
+    ],
+  ]
 };
