@@ -3,7 +3,7 @@ import path from 'path';
 
 export default class Trackpoth extends Client {
   constructor(owner, config) {
-    super({ owner });
+    super({ owner, commandPrefix: config.commandPrefix });
     this.groups = config.groups;
   }
 
