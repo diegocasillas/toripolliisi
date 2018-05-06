@@ -45,3 +45,7 @@ Copy `.env.example.json` to `.env.json` and add your token and owner ID.
 To see a list of commands simply type `!help` or `@Trackpoth help` in the server text channel.
 
 *Example: `!greeting` or `@Trackpoth greeting`*
+
+## License
+
+Trackpoth is under [MIT License](/README.md).
