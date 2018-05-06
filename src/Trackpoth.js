@@ -8,8 +8,10 @@ export default class Trackpoth extends Client {
   }
 
   init() {
+    this.registry.registerDefaultTypes();
     this.registry.registerGroups(this.groups);
-    this.registry.registerDefaults();
+    this.registry.registerDefaultGroups();
+    this.registry.registerDefaultCommands({ commandState: false });
     this.registry.registerCommandsIn(path.join(__dirname, 'commands'));
 
     this.on('ready', () => {
