@@ -40,7 +40,7 @@ Copy `.env.example.json` to `.env.json` and add your token and owner ID.
 
 `npm install && npm start`
 
-### Have fun with Trackpoth!
+## Have fun with Trackpoth!
 
 To see a list of commands simply type `!help` or `@Trackpoth help` in the server text channel.
 
