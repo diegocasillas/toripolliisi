@@ -48,4 +48,4 @@ To see a list of commands simply type `!help` or `@Trackpoth help` in the server
 
 ## License
 
-Trackpoth is under [MIT License](/README.md).
+Trackpoth is under [MIT License](/LICENSE).
