@@ -5,6 +5,10 @@ export default {
       'Herramientas'
     ],
     [
+      'music',
+      'Música'
+    ],
+    [
       'fun',
       'Memes',
     ],
