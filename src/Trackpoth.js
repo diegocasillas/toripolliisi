@@ -8,15 +8,19 @@ export default class Trackpoth extends Client {
   }
 
   init() {
-    this.registry.registerDefaultTypes();
-    this.registry.registerGroups(this.groups);
-    this.registry.registerDefaultGroups();
-    this.registry.registerDefaultCommands({ commandState: false });
-    this.registry.registerCommandsIn(path.join(__dirname, 'commands'));
+    this.register();
 
     this.on('ready', () => {
       console.log(`Logged in as ${this.user.tag}.`);
       this.user.setActivity('Hello World');
     });
+  }
+
+  register() {
+    this.registry.registerDefaultTypes();
+    this.registry.registerGroups(this.groups);
+    this.registry.registerDefaultGroups();
+    this.registry.registerDefaultCommands({ commandState: false });
+    this.registry.registerCommandsIn(path.join(__dirname, 'commands'));
   }
 }
