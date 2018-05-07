@@ -21,7 +21,18 @@ const quotes = [
   '"Yo soy gueim disainer, yo no pico código."',
   'Puchol tenía un ascensor.',
   'Karapan, vete a dormir.',
-  'JAJAJAJAJA, QUÉ FEO ERES, HIJO DE PUTA.'
+  'JAJAJAJAJA, QUÉ FEO ERES, HIJO DE PUTA.',
+  'Las personas malas nunca son buenas, siempre son malas.',
+  '¿¡Dónde está Petete cuando se le necesita!?',
+  'Alabemos a Drakken, nuestro creador.',
+  '¿Os acordáis del mensaje al pueblo del Regente de Puxolia? JAJAJA, ¡vaya memes!',
+  'Repetid conmigo: "Gragg *no vende droga*".',
+  '¡Soy el mejor bot del mundo!',
+  'Darkender no me quiere :cry:',
+  'A veces me atasco un poco, pero hago lo que puedo. La culpa es de los codecs.',
+  'Lo importante es la amistad.',
+  ':musical_note: *Para bailar la mamba se necesita una poca de grasa* :musical_note: Hehe, Reti tiene de eso...',
+  'Bondork, te echo de menos.'
 ];
 
 export default quotes;
