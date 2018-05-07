@@ -1,5 +1,5 @@
 export function random(array) {
-  const random = Math.floor(Math.random() * (array.length - 1));
+  const random = Math.floor(Math.random() * (array.length));
 
   return array[random];
 }
