@@ -6,7 +6,7 @@ class QuoteCommand extends Command {
   constructor(client) {
     super(client, {
       name: 'quote',
-      aliases: ['ilustranos', 'memea'],
+      aliases: ['ilustranos', 'memea', 'cita', 'habla'],
       group: 'fun',
       memberName: 'quote',
       description: 'Lo mismo se pone a memear que a filosofar.',
