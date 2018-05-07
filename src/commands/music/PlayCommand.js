@@ -1,5 +1,5 @@
 import { Command } from 'discord.js-commando';
-import ytdl from 'ytdl-core';
+import MusicManager from '../../utils/MusicManager.js';
 
 class PlayCommand extends Command {
   constructor(client) {
@@ -18,29 +18,11 @@ class PlayCommand extends Command {
         }
       ],
     });
-    this.streamOptions = { seek: 0, volume: 0.5 };
+    this.musicManager = new MusicManager();
   }
 
   run(message, { video }) {
-    this.join(message, video);
-  }
-
-  join(message, video) {
-    if (message.guild) {
-      if (message.member.voiceChannel) {
-        message.member.voiceChannel.join().then((connection) => {
-          return this.play(video, connection);
-        }).catch(() => message.reply('**Ha ocurrido un error en la reproducción :(**'));
-      } else {
-        message.reply('**Debes estar conectado a un canal.**');
-      }
-    }
-  }
-
-  play(video, connection) {
-    const stream = ytdl(video, { filter: 'audioonly' });
-
-    return connection.playStream(stream, this.streamOptions);
+    this.musicManager.join(message, video);
   }
 }
 
