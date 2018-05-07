@@ -24,10 +24,34 @@ class MusicManager {
   }
 
   stop(message) {
+    const dispatcher = this.getDispatcher(message);
+
+    if (dispatcher) {
+      return dispatcher.end();
+    }
+  }
+
+  pause(message) {
+    const dispatcher = this.getDispatcher(message);
+
+    if (dispatcher) {
+      return dispatcher.pause();
+    }
+  }
+
+  resume(message) {
+    const dispatcher = this.getDispatcher(message);
+
+    if (dispatcher) {
+      return dispatcher.resume();
+    }
+  }
+
+  getDispatcher(message) {
     const member = message.member;
 
     return member.voiceChannel && member.voiceChannel.connection ?
-      member.voiceChannel.connection.dispatcher.end() : null;
+      member.voiceChannel.connection.dispatcher : null;
   }
 }
 
