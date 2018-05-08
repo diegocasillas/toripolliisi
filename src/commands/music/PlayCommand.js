@@ -22,7 +22,11 @@ class PlayCommand extends Command {
   }
 
   run(message, { video }) {
-    this.musicManager.join(message, video);
+    this.musicManager.play(message, video).catch((error) => {
+      message.reply(error);
+    });
+
+    return;
   }
 }
 
