@@ -2,32 +2,55 @@ import ytdl from 'ytdl-core';
 
 class MusicManager {
   constructor() {
-    this.streamOptions = { seek: 0, volume: 0.5 };
+    this.streamOptions = { seek: 0, volume: 0.1 };
   }
 
-  join(message, video) {
-    if (message.guild) {
-      if (message.member.voiceChannel) {
-        message.member.voiceChannel.join().then((connection) => {
-          return this.play(video, connection);
-        }).catch(() => message.reply('**Ha ocurrido un error en la reproducción :(**'));
+  join(message) {
+    return new Promise((resolve, reject) => {
+      if (!message.guild || !message.member.voiceChannel) {
+        reject('**Debes estar conectado a un canal.**');
       } else {
-        message.reply('**Debes estar conectado a un canal.**');
+        resolve(message.member.voiceChannel.join());
       }
-    }
+    });
   }
 
-  play(video, connection) {
-    const stream = ytdl(video, { filter: 'audioonly' });
+  createStream(video) {
+    return ytdl(video, { filter: 'audioonly' });
+  }
 
+  createDispatcher(connection, stream) {
     return connection.playStream(stream, this.streamOptions);
+  }
+
+  play(message, video) {
+    return new Promise((resolve, reject) => {
+      this.join(message).then((connection) => {
+        const stream = this.createStream(video);
+
+        resolve(this.createDispatcher(connection, stream));
+      }).catch((error) => {
+        reject(error);
+      });
+    });
+  }
+
+  next(dispatcher, connection, video) {
+    dispatcher.on('end', (reason) => {
+      if (reason && reason !== 'stopped') {
+        const stream = this.createStream(video);
+        const newDispatcher = this.createDispatcher(connection, stream);
+
+        return this.next(newDispatcher, connection, video);
+      }
+    });
   }
 
   stop(message) {
     const dispatcher = this.getDispatcher(message);
 
     if (dispatcher) {
-      return dispatcher.end();
+      return dispatcher.end('stopped');
     }
   }
 
