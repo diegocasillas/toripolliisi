@@ -2,19 +2,19 @@ export default {
   'groups': [
     [
       'tools',
-      'Herramientas'
+      'Tools'
     ],
     [
       'music',
-      'Música'
+      'Music'
     ],
     [
       'fun',
-      'Memes',
+      'Fun',
     ],
     [
       'info',
-      'Información',
+      'Info',
     ]
   ]
 };
