@@ -11,8 +11,9 @@ export default class Toripolliisi extends Client {
     this.register();
 
     this.on('ready', () => {
-      console.log(`Logged in as ${this.user.tag}.`);
+      this.user.setUsername('Toripolliisi');
       this.user.setActivity('Oulu', { type: 'WATCHING' });
+      console.log(`Logged in as ${this.user.tag}.`);
     });
   }
 
