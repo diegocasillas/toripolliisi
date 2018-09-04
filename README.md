@@ -1,12 +1,12 @@
 <div>
-  <h1 align="center">This is <b>Trackpoth</b></h1>
+  <h1 align="center">This is <b>Toripolliisi</b></h1>
   <p align="center">
     <img align="center" width="150" src="https://upload.wikimedia.org/wikipedia/commons/3/38/Robot-clip-art-book-covers-feJCV3-clipart.png">
   </p>
   <h2 align="center">Reticueva's Discord bot</h2>
 </div>
 
-**Trackpoth** is a lovely bot that lives in Reticueva's Discord. He plays music, greets you, answers your questions and he's learning to do more cool and funny things! Sadly, he only speaks Spanish for now...
+**Toripolliisi** is a lovely bot that lives in Reticueva's Discord. He plays music, greets you, answers your questions and he's learning to do more cool and funny things! Sadly, he only speaks Spanish for now...
 
 ## Requirements
 
@@ -40,12 +40,12 @@ Copy `.env.example.json` to `.env.json` and add your token and owner ID.
 
 `npm install && npm start`
 
-## Have fun with Trackpoth!
+## Have fun with Toripolliisi!
 
-To see a list of commands simply type `!help` or `@Trackpoth help` in the server text channel.
+To see a list of commands simply type `!help` or `@Toripolliisi help` in the server text channel.
 
-*Example: `!greeting` or `@Trackpoth greeting`*
+*Example: `!greeting` or `@Toripolliisi greeting`*
 
 ## License
 
-Trackpoth is under [MIT License](/LICENSE).
+Toripolliisi is under [MIT License](/LICENSE).

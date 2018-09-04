@@ -1,8 +1,8 @@
-import Trackpoth from './Trackpoth.js';
+import Toripolliisi from './Toripolliisi.js';
 import { owner, token } from '../.env.json';
 import config from './config.js';
 
-const trackpoth = new Trackpoth(owner, config);
+const toripolliisi = new Toripolliisi(owner, config);
 
-trackpoth.init();
-trackpoth.login(token);
+toripolliisi.init();
+toripolliisi.login(token);

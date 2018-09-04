@@ -1,7 +1,7 @@
 {
-  "name": "trackpoth",
+  "name": "Toripolliisi",
   "version": "1.0.0",
-  "description": "Reticueva's Discord bot",
+  "description": "OUAS Discord Bot",
   "main": "dist/index.js",
   "scripts": {
     "test": "test",
@@ -11,20 +11,20 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/diegocasillasdev/trackpoth.git"
+    "url": "git+https://github.com/diegocasillas/Toripolliisi.git"
   },
   "keywords": [
-    "trackpoth",
-    "reticueva",
+    "Toripolliisi",
+    "Oulu",
     "discord",
     "bot"
   ],
   "author": "Diego Casillas <diegocasillasdev@gmail.com> (http://diegocasillasdev.com/)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/diegocasillasdev/trackpoth/issues"
+    "url": "https://github.com/diegocasillas/Toripolliisi/issues"
   },
-  "homepage": "https://github.com/diegocasillasdev/trackpoth#readme",
+  "homepage": "https://github.com/diegocasillas/Toripolliisi#readme",
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.6.1",

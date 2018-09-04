@@ -1,7 +1,7 @@
 import { Client } from 'discord.js-commando';
 import path from 'path';
 
-export default class Trackpoth extends Client {
+export default class Toripolliisi extends Client {
   constructor(owner, config) {
     super({ owner });
     this.groups = config.groups;
@@ -12,7 +12,7 @@ export default class Trackpoth extends Client {
 
     this.on('ready', () => {
       console.log(`Logged in as ${this.user.tag}.`);
-      this.user.setActivity('Hello World');
+      this.user.setActivity('Oulu', { type: 'WATCHING' });
     });
   }
 
