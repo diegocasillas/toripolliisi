@@ -1,7 +1,7 @@
 <div>
   <h1 align="center">This is <b>Toripolliisi</b></h1>
   <p align="center">
-    <img align="center" width="150" src="https://upload.wikimedia.org/wikipedia/commons/3/38/Robot-clip-art-book-covers-feJCV3-clipart.png">
+    <img align="center" width="150" src="http://www.elokuvaviikko.fi/wp-content/uploads/layerslider/KAUPUNKISINFONIAT-SUOMESSA/Toripolliisi.png">
   </p>
   <h2 align="center">OUAS's Discord bot</h2>
 </div>
