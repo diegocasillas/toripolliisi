@@ -5,10 +5,10 @@ class PauseCommand extends Command {
   constructor(client) {
     super(client, {
       name: 'pause',
-      aliases: ['pausa', 'espera'],
+      aliases: ['pause', 'wait'],
       group: 'music',
       memberName: 'pause',
-      description: 'Pausa la canción actual.'
+      description: 'Pauses the current song.'
     });
     this.musicManager = new MusicManager();
   }

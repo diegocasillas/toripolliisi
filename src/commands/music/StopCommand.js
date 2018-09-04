@@ -5,10 +5,10 @@ class StopCommand extends Command {
   constructor(client) {
     super(client, {
       name: 'stop',
-      aliases: ['para'],
+      aliases: ['stop'],
       group: 'music',
       memberName: 'stop',
-      description: 'Para la canción actual.'
+      description: 'Stops the current song.'
     });
     this.musicManager = new MusicManager();
   }

@@ -6,11 +6,10 @@ class QuoteCommand extends Command {
   constructor(client) {
     super(client, {
       name: 'quote',
-      aliases: ['ilustranos', 'memea', 'cita', 'habla'],
+      aliases: ['quote', 'speak', 'say'],
       group: 'fun',
       memberName: 'quote',
-      description: 'Lo mismo se pone a memear que a filosofar.',
-      examples: ['ilustranos', 'memea']
+      description: 'Says something random'
     });
     this.quotes = quotes;
   }

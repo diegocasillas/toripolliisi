@@ -7,23 +7,23 @@ class SingCommand extends Command {
   constructor(client) {
     super(client, {
       name: 'sing',
-      aliases: ['canta', 'cantame'],
+      aliases: ['sing'],
       group: 'music',
       memberName: 'sing',
-      description: 'Reproduce una canción aleatoria.',
+      description: 'Plays a random song.',
       args: [
         {
           key: 'forever',
-          prompt: '¿Reproducir hasta el infinito y más allá?',
+          prompt: 'Play forever?',
           type: 'string',
           default: '',
           validate: (forever) => {
             const aliases = [
-              'forever', 'siempre', 'mucho', 'infinito'
+              'forever', 'always', 'infinite'
             ];
 
             if (!aliases.includes(forever)) {
-              return '¿Qué? No te entiendo. ¿Querías decir forever?';
+              return 'Mitä? I don\'t understand. Did you want to say "forever"?';
             }
 
             return true;

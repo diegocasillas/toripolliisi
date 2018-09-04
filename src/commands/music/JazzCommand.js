@@ -7,7 +7,7 @@ class JazzCommand extends Command {
       name: 'jazz',
       group: 'music',
       memberName: 'jazz',
-      description: 'Reproduce 10 horas de delicioso jazz.'
+      description: 'Plays delicious jazz for 10 hours.'
     });
     this.musicManager = new MusicManager();
     this.song = 'https://www.youtube.com/watch?v=EAg4wNVvC-8';

@@ -6,10 +6,10 @@ class GreetingCommand extends Command {
   constructor(client) {
     super(client, {
       name: 'greeting',
-      aliases: ['hola', 'ola', 'saluda'],
+      aliases: ['greeting', 'hello', 'hi', 'moi', 'hei', 'terve', 'sup'],
       group: 'fun',
       memberName: 'greeting',
-      description: 'Saluda cariñosamente.'
+      description: 'Greets in a lovely way.'
     });
     this.greetings = greetings;
   }

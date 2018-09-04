@@ -4,10 +4,10 @@ class LeaveCommand extends Command {
   constructor(client) {
     super(client, {
       name: 'leave',
-      aliases: ['adios', 'bye', 'vete', 'gtfo', 'pirate'],
+      aliases: ['leave', 'bye', 'moikka', 'gtfo'],
       group: 'music',
       memberName: 'leave',
-      description: 'Se va del canal.'
+      description: 'Leaves the channel.'
     });
   }
 

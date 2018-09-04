@@ -5,10 +5,10 @@ class ResumeCommand extends Command {
   constructor(client) {
     super(client, {
       name: 'resume',
-      aliases: ['continua', 'sigue'],
+      aliases: ['resume', 'continue'],
       group: 'music',
       memberName: 'resume',
-      description: 'Continúa la canción actual.'
+      description: 'Resumes the current song.'
     });
     this.musicManager = new MusicManager();
   }

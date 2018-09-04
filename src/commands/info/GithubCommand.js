@@ -8,12 +8,12 @@ class GithubCommand extends Command {
       aliases: ['repositorio', 'repo', 'git'],
       group: 'info',
       memberName: 'github',
-      description: 'Enlaza al repositorio de Github.'
+      description: 'Links to the GitHub repository.'
     });
   }
 
   run(message) {
-    const parts = [`**Repositorio:** ${homepage}`, `**Reportar bugs:** ${bugs.url}`];
+    const parts = [`**Repository:** ${homepage}`, `**Report bugs:** ${bugs.url}`];
 
     return parts.forEach((part) => message.say(part));
   }

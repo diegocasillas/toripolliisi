@@ -8,7 +8,7 @@ class MusicManager {
   join(message) {
     return new Promise((resolve, reject) => {
       if (!message.guild || !message.member.voiceChannel) {
-        reject('**Debes estar conectado a un canal.**');
+        reject('**You must be connected to a channel.**');
       } else {
         resolve(message.member.voiceChannel.join());
       }

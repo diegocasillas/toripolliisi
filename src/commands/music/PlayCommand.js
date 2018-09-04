@@ -5,15 +5,15 @@ class PlayCommand extends Command {
   constructor(client) {
     super(client, {
       name: 'play',
-      aliases: ['toca'],
+      aliases: ['play'],
       group: 'music',
       memberName: 'play',
-      description: 'Reproduce una canción desde YouTube.',
-      examples: ['play https://www.youtube.com/watch?v=dQw4w9WgXcQ', 'toca https://www.youtube.com/watch?v=dQw4w9WgXcQ'],
+      description: 'Plays a song from YouTube.',
+      examples: ['play https://www.youtube.com/watch?v=dQw4w9WgXcQ'],
       args: [
         {
           key: 'video',
-          prompt: 'Introduce un enlace a un vídeo de YouTube.',
+          prompt: 'Introduce a YouTube\'s video URL.',
           type: 'string'
         }
       ],
