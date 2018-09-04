@@ -3,10 +3,10 @@
   <p align="center">
     <img align="center" width="150" src="https://upload.wikimedia.org/wikipedia/commons/3/38/Robot-clip-art-book-covers-feJCV3-clipart.png">
   </p>
-  <h2 align="center">Reticueva's Discord bot</h2>
+  <h2 align="center">OUAS's Discord bot</h2>
 </div>
 
-**Toripolliisi** is a lovely bot that lives in Reticueva's Discord. He plays music, greets you, answers your questions and he's learning to do more cool and funny things! Sadly, he only speaks Spanish for now...
+**Toripolliisi** is a lovely bot that lives in the Discord server of the Oulu University of Applied Sciences. He plays music, greets you, answers your questions and he's learning to do more cool and funny things!
 
 ## Requirements
 
