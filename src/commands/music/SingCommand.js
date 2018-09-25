@@ -7,7 +7,7 @@ class SingCommand extends Command {
   constructor(client) {
     super(client, {
       name: 'sing',
-      aliases: ['sing'],
+      aliases: ['sing', 'laulaa'],
       group: 'music',
       memberName: 'sing',
       description: 'Plays a random song.',

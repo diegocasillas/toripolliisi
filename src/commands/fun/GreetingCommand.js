@@ -6,7 +6,7 @@ class GreetingCommand extends Command {
   constructor(client) {
     super(client, {
       name: 'greeting',
-      aliases: ['greeting', 'hello', 'hi', 'moi', 'hei', 'terve', 'sup'],
+      aliases: ['greeting', 'hello', 'hi', 'yo', 'moi', 'hei', 'terve', 'sup'],
       group: 'fun',
       memberName: 'greeting',
       description: 'Greets in a lovely way.'

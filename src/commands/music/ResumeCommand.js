@@ -5,7 +5,7 @@ class ResumeCommand extends Command {
   constructor(client) {
     super(client, {
       name: 'resume',
-      aliases: ['resume', 'continue'],
+      aliases: ['resume', 'continue', 'jatkaa'],
       group: 'music',
       memberName: 'resume',
       description: 'Resumes the current song.'

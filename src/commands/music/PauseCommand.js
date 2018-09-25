@@ -5,7 +5,7 @@ class PauseCommand extends Command {
   constructor(client) {
     super(client, {
       name: 'pause',
-      aliases: ['pause', 'wait'],
+      aliases: ['pause', 'wait', 'odota'],
       group: 'music',
       memberName: 'pause',
       description: 'Pauses the current song.'

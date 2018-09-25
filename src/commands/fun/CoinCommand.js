@@ -4,7 +4,7 @@ class CoinCommand extends Command {
   constructor(client) {
     super(client, {
       name: 'coin',
-      aliases: ['coin', 'flip', 'throw', 'random'],
+      aliases: ['coin', 'kolikko', 'flip', 'throw', 'heitä', 'random'],
       group: 'fun',
       memberName: 'coin',
       description: 'Flips a coin.'

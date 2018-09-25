@@ -5,7 +5,7 @@ class GithubCommand extends Command {
   constructor(client) {
     super(client, {
       name: 'github',
-      aliases: ['repositorio', 'repo', 'git'],
+      aliases: ['repository', 'repo', 'git'],
       group: 'info',
       memberName: 'github',
       description: 'Links to the GitHub repository.'

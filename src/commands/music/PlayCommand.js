@@ -5,7 +5,7 @@ class PlayCommand extends Command {
   constructor(client) {
     super(client, {
       name: 'play',
-      aliases: ['play'],
+      aliases: ['play', 'soita'],
       group: 'music',
       memberName: 'play',
       description: 'Plays a song from YouTube.',
