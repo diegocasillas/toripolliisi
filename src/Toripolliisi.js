@@ -1,10 +1,12 @@
 import { Client } from 'discord.js-commando';
 import path from 'path';
+import MusicManager from './utils/MusicManager';
 
 export default class Toripolliisi extends Client {
   constructor(owner, config) {
     super({ owner });
     this.groups = config.groups;
+    this.musicManager = new MusicManager();
   }
 
   init() {

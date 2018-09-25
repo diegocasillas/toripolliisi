@@ -1,5 +1,4 @@
 import { Command } from 'discord.js-commando';
-import MusicManager from '../../utils/MusicManager.js';
 
 class PlayCommand extends Command {
   constructor(client) {
@@ -18,11 +17,10 @@ class PlayCommand extends Command {
         }
       ],
     });
-    this.musicManager = new MusicManager();
   }
 
   run(message, { video }) {
-    this.musicManager.play(message, video).catch((error) => {
+    this.client.musicManager.play(message, video).catch((error) => {
       message.reply(error);
     });
 

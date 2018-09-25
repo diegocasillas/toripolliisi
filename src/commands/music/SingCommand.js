@@ -1,5 +1,4 @@
 import { Command } from 'discord.js-commando';
-import MusicManager from '../../utils/MusicManager.js';
 import songs from '../../resources/songs.js';
 import { random } from '../../utils/helpers.js';
 
@@ -31,21 +30,20 @@ class SingCommand extends Command {
         }
       ],
     });
-    this.musicManager = new MusicManager();
     this.songs = songs;
   }
 
   run(message, { forever }) {
     if (!forever) {
-      this.musicManager.play(message, random(this.songs)).catch((error) => {
+      this.client.musicManager.play(message, random(this.songs)).catch((error) => {
         message.reply(error);
       });
 
       return;
     }
 
-    this.musicManager.play(message, random(this.songs)).then((dispatcher) => {
-      this.musicManager.next(dispatcher, message.member.voiceChannel.connection, random(this.songs));
+    this.client.musicManager.play(message, random(this.songs)).then((dispatcher) => {
+      this.client.musicManager.next(dispatcher, message.member.voiceChannel.connection, random(this.songs));
     }).catch((error) => message.reply(error));
 
     return;

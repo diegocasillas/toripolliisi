@@ -1,5 +1,4 @@
 import { Command } from 'discord.js-commando';
-import MusicManager from '../../utils/MusicManager.js';
 
 class StopCommand extends Command {
   constructor(client) {
@@ -10,11 +9,10 @@ class StopCommand extends Command {
       memberName: 'stop',
       description: 'Stops the current song.'
     });
-    this.musicManager = new MusicManager();
   }
 
   run(message) {
-    return this.musicManager.stop(message);
+    return this.client.musicManager.stop(message);
   }
 }
 
