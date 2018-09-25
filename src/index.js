@@ -1,8 +1,10 @@
 import Toripolliisi from './Toripolliisi.js';
-import { owner, token } from '../.env.json';
+import dotenv from 'dotenv';
 import config from './config.js';
 
-const toripolliisi = new Toripolliisi(owner, config);
+dotenv.load();
+
+const toripolliisi = new Toripolliisi(process.env.OWNER, config);
 
 toripolliisi.init();
-toripolliisi.login(token);
+toripolliisi.login(process.env.TOKEN);
