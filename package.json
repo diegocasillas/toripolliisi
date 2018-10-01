@@ -35,7 +35,9 @@
     "discord.js-commando": "^0.10.0",
     "dotenv": "^6.0.0",
     "ffmpeg-binaries": "^3.2.2-3",
+    "is-url": "^1.2.4",
     "opusscript": "0.0.6",
+    "simple-youtube-api": "^5.0.2",
     "ytdl-core": "^0.20.2"
   },
   "babel": {
