@@ -1,4 +1,5 @@
 import { Command } from 'discord.js-commando';
+import { RichEmbed } from 'discord.js';
 import isUrl from 'is-url';
 import { searchVideo, getVideo } from '../../utils/youtube';
 
@@ -24,15 +25,27 @@ class PlayCommand extends Command {
   run(message, { video }) {
     if (isUrl(video)) {
       getVideo(video).then((result) => {
-        this.client.musicManager.play(message, video).then(() => message.say('Playing ' + result.title)).catch((error) => {
+        const embed = new RichEmbed()
+          .setTitle(result.title)
+          .setDescription('Requested by ' + message.author)
+          .setColor('0xFFFFFF')
+          .setThumbnail(result.thumbnails.default.url);
+
+        this.client.musicManager.play(message, video).then(() => message.channel.send(embed)).catch((error) => {
           message.reply(error);
         });
       })
     } else {
       searchVideo(video).then((result) => {
         video = 'https://www.youtube.com/watch?v=' + result.id;
-        
-        this.client.musicManager.play(message, video).then(() => message.say('Playing ' + result.title)).catch((error) => {
+
+        const embed = new RichEmbed()
+          .setTitle(result.title)
+          .setDescription('Requested by ' + message.author)
+          .setColor('0xFFFFFF')
+          .setThumbnail(result.thumbnails.default.url);
+
+        this.client.musicManager.play(message, video).then(() => message.channel.send(embed)).catch((error) => {
           message.reply(error);
         });
       });
