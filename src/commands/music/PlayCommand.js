@@ -1,4 +1,6 @@
 import { Command } from 'discord.js-commando';
+import isUrl from 'is-url';
+import { searchVideo, getVideo } from '../../utils/youtube';
 
 class PlayCommand extends Command {
   constructor(client) {
@@ -20,9 +22,21 @@ class PlayCommand extends Command {
   }
 
   run(message, { video }) {
-    this.client.musicManager.play(message, video).catch((error) => {
-      message.reply(error);
-    });
+    if (isUrl(video)) {
+      getVideo(video).then((result) => {
+        this.client.musicManager.play(message, video).then(() => message.say('Playing ' + result.title)).catch((error) => {
+          message.reply(error);
+        });
+      })
+    } else {
+      searchVideo(video).then((result) => {
+        video = 'https://www.youtube.com/watch?v=' + result.id;
+        
+        this.client.musicManager.play(message, video).then(() => message.say('Playing ' + result.title)).catch((error) => {
+          message.reply(error);
+        });
+      });
+    }
 
     return;
   }
