@@ -1,6 +1,6 @@
 import { Command } from 'discord.js-commando';
-import { random } from '../../utils/helpers.js';
 import quotes from '../../resources/quotes.js';
+import axios from 'axios';
 
 class QuoteCommand extends Command {
   constructor(client) {
@@ -11,11 +11,12 @@ class QuoteCommand extends Command {
       memberName: 'quote',
       description: 'Says something random'
     });
-    this.quotes = quotes;
   }
 
   run(message) {
-    return message.say(random(this.quotes), { tts: true });
+    return axios.get('https://talaikis.com/api/quotes/random/').then((response) => {
+      message.say(response.data.quote, { tts: true });
+    })
   }
 }
 
