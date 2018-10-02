@@ -15,7 +15,7 @@ class GreetingCommand extends Command {
   }
 
   run(message) {
-    return message.say(random(this.greetings));
+    return message.say(random(this.greetings), { tts: true });
   }
 }
 

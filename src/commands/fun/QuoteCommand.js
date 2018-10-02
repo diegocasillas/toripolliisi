@@ -15,7 +15,7 @@ class QuoteCommand extends Command {
   }
 
   run(message) {
-    return message.say(random(this.quotes));
+    return message.say(random(this.quotes), { tts: true });
   }
 }
 

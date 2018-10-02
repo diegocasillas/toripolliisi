@@ -12,7 +12,9 @@ class LeaveCommand extends Command {
   }
 
   run(message) {
-    return this.leave(message.member.voiceChannel);
+    this.leave(message.member.voiceChannel);
+    
+    return message.say('Bye!', { tts: true });
   }
 
   leave(voiceChannel) {

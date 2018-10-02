@@ -13,7 +13,7 @@ class BoredCommand extends Command {
 
   run(message) {
     axios.get('http://boredapi.com/api/activity/').then((response) => {
-      message.say(response.data.activity);
+      message.say(response.data.activity, { tts: true });
     })
   }
 }

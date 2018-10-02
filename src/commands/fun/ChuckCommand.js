@@ -13,7 +13,7 @@ class ChuckCommand extends Command {
 
   run(message) {
     axios.get('https://api.chucknorris.io/jokes/random').then((response) => {
-      message.say(response.data.value, {tts: true});
+      message.say(response.data.value, { tts: true });
     })
   }
 }
