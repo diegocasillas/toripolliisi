@@ -1,8 +1,17 @@
-const YouTube = require('simple-youtube-api');
+import YouTube from 'simple-youtube-api';
+import isUrl from 'is-url';
+
+
 const youtube = new YouTube(process.env.YOUTUBE);
 
-export const searchVideo = (name) => youtube.searchVideos(name, 1)
-  .then((results) => results[0]);
-
-export const getVideo = (url) => youtube.getVideo(url)
-  .then((result) => result);
+export const searchVideo = (requestedVideo) => {
+  return new Promise((resolve, reject) => {
+    if (isUrl(requestedVideo)) {
+      resolve(youtube.getVideo(requestedVideo)
+        .then((result) => result));
+    } else {
+      resolve(youtube.searchVideos(requestedVideo, 1)
+        .then((results) => results[0]));
+    }
+  });
+};

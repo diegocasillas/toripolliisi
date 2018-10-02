@@ -1,7 +1,6 @@
 import { Command } from 'discord.js-commando';
 import { RichEmbed } from 'discord.js';
-import isUrl from 'is-url';
-import { searchVideo, getVideo } from '../../utils/youtube';
+import { searchVideo } from '../../utils/youtube';
 
 class PlayCommand extends Command {
   constructor(client) {
@@ -14,21 +13,11 @@ class PlayCommand extends Command {
       examples: ['play https://www.youtube.com/watch?v=dQw4w9WgXcQ'],
       args: [
         {
-          key: 'video',
+          key: 'requestedVideo',
           prompt: 'Introduce a YouTube\'s video URL.',
           type: 'string'
         }
       ],
-    });
-  }
-
-  getResultVideo(video) {
-    return new Promise((resolve, reject) => {
-      if (isUrl(video)) {
-        resolve(getVideo(video));
-      } else {
-        resolve(searchVideo(video));
-      }
     });
   }
 
@@ -41,14 +30,21 @@ class PlayCommand extends Command {
       .setURL(url);
   }
 
-  run(message, { video }) {
-    this.getResultVideo(video).then((result) => {
-      const videoUrl = 'https://www.youtube.com/watch?v=' + result.id;
-      const embed = this.getEmbed(result.title, message.author, result.thumbnails.default.url, videoUrl);
+  run(message, { requestedVideo }) {
+    searchVideo(requestedVideo).then((video) => {
+      const videoUrl = 'https://www.youtube.com/watch?v=' + video.id;
+      const embed = this.getEmbed(
+        video.title,
+        message.author,
+        video.thumbnails.default.url,
+        videoUrl
+      );
 
-      this.client.musicManager.play(message, videoUrl).then(() => message.channel.send(embed)).catch((error) => {
-        message.reply(error);
-      });
+      this.client.musicManager.play(message, videoUrl)
+        .then(() => message.channel.send(embed))
+        .catch((error) => {
+          message.reply(error);
+        });
     });
   }
 }
