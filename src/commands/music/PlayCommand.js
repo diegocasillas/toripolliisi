@@ -22,36 +22,34 @@ class PlayCommand extends Command {
     });
   }
 
+  getResultVideo(video) {
+    return new Promise((resolve, reject) => {
+      if (isUrl(video)) {
+        resolve(getVideo(video));
+      } else {
+        resolve(searchVideo(video));
+      }
+    });
+  }
+
+  getEmbed(title, requestedBy, image, url) {
+    return new RichEmbed()
+      .setTitle(title)
+      .setDescription('Requested by ' + requestedBy)
+      .setColor('0xFFFFFF')
+      .setThumbnail(image)
+      .setURL(url);
+  }
+
   run(message, { video }) {
-    if (isUrl(video)) {
-      getVideo(video).then((result) => {
-        const embed = new RichEmbed()
-          .setTitle(result.title)
-          .setDescription('Requested by ' + message.author)
-          .setColor('0xFFFFFF')
-          .setThumbnail(result.thumbnails.default.url);
+    this.getResultVideo(video).then((result) => {
+      const videoUrl = 'https://www.youtube.com/watch?v=' + result.id;
+      const embed = this.getEmbed(result.title, message.author, result.thumbnails.default.url, videoUrl);
 
-        this.client.musicManager.play(message, video).then(() => message.channel.send(embed)).catch((error) => {
-          message.reply(error);
-        });
-      })
-    } else {
-      searchVideo(video).then((result) => {
-        video = 'https://www.youtube.com/watch?v=' + result.id;
-
-        const embed = new RichEmbed()
-          .setTitle(result.title)
-          .setDescription('Requested by ' + message.author)
-          .setColor('0xFFFFFF')
-          .setThumbnail(result.thumbnails.default.url);
-
-        this.client.musicManager.play(message, video).then(() => message.channel.send(embed)).catch((error) => {
-          message.reply(error);
-        });
+      this.client.musicManager.play(message, videoUrl).then(() => message.channel.send(embed)).catch((error) => {
+        message.reply(error);
       });
-    }
-
-    return;
+    });
   }
 }
 
