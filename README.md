@@ -6,7 +6,7 @@
   <h2 align="center">OUAS's Discord bot</h2>
 </div>
 
-**Toripolliisi** is a lovely bot that lives in the Discord server of the Oulu University of Applied Sciences. He plays music, greets you, answers your questions and he's learning to do more cool and funny things!
+**Toripolliisi** is a lovely bot that lives in the Discord server of the Oulu University of Applied Sciences. He plays music, greets you, tells jokes, answers your questions and he's learning to do more cool and funny things!
 
 ## Requirements
 
@@ -27,13 +27,12 @@ To get your ID, type `\@[your-username]` in a Discord Chat. You will get a messa
 
 ### Set up the configuration file
 
-Copy `.env.example.json` to `.env.json` and add your token and owner ID.
+Copy `.env.example` to `.env` and add your token, owner ID and YouTube API key.
 
-```json
-{
-    "owner": "1234567890",
-    "token": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
-}
+```
+OWNER=1234567890
+TOKEN=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+YOUTUBE=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 ```
 
 ### Install and run
@@ -44,7 +43,7 @@ Copy `.env.example.json` to `.env.json` and add your token and owner ID.
 
 To see a list of commands simply type `!help` or `@Toripolliisi help` in the server text channel.
 
-*Example: `!greeting` or `@Toripolliisi greeting`*
+*Example: `!moi` or `@Toripolliisi moi`*
 
 ## License
 
