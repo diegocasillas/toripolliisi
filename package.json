@@ -11,20 +11,20 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/diegocasillas/Toripolliisi.git"
+    "url": "git+https://github.com/diegocasillas/toripolliisi.git"
   },
   "keywords": [
-    "Toripolliisi",
-    "Oulu",
+    "toripolliisi",
+    "oulu",
     "discord",
     "bot"
   ],
-  "author": "Diego Casillas <diegocasillasdev@gmail.com> (http://diegocasillasdev.com/)",
+  "author": "Diego Casillas <diegocasillasdev@gmail.com> (http://diegocasillas.com/)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/diegocasillas/Toripolliisi/issues"
+    "url": "https://github.com/diegocasillas/toripolliisi/issues"
   },
-  "homepage": "https://github.com/diegocasillas/Toripolliisi#readme",
+  "homepage": "https://github.com/diegocasillas/toripolliisi#readme",
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.6.1",
