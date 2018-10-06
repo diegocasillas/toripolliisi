@@ -37,7 +37,7 @@ YOUTUBE=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 ### Install and run
 
-`npm install && npm start`
+`$ npm install && npm start`
 
 ## Have fun with Toripolliisi!
 
